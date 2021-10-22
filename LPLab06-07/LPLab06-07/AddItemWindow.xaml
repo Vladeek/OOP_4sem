@@ -1,0 +1,56 @@
+﻿<Window x:Class="LPLab06_07.AddItemWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LPLab06_07"
+        mc:Ignorable="d"
+        Title="AddItemWindow" Height="450" Width="800" ResizeMode="NoResize" Cursor="Hand">
+    <Window.Resources>
+        <Style x:Key="dark_maincolor">
+            <Setter Property="Control.Background" Value="#1E3C7B"></Setter>
+            <Setter Property="Control.Foreground" Value="White"></Setter>
+        </Style>
+        <Style x:Key="light_maincolor">
+            <Setter Property="Control.Background" Value="#517DBF"></Setter>
+            <Setter Property="Control.Foreground" Value="White"></Setter>
+        </Style>
+    </Window.Resources>
+    
+    <Grid Style="{StaticResource dark_maincolor}">
+        <DockPanel LastChildFill="False">
+            <ScrollViewer DockPanel.Dock="Left" Width="650">
+                <ListBox x:Name="listBox" SelectionMode="Single" SelectionChanged="listBox_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Border x:Name="listElement" BorderThickness="2">
+                                <StackPanel Margin="5">
+                                    <Image Width="100" Height="100" Source="{Binding Path=ImgPath}"></Image>
+                                    <TextBlock FontSize="20" Text="{Binding Path=Title}"></TextBlock>
+                                    <TextBlock FontSize="16" Text="{Binding Path=ShortDescription}"></TextBlock>
+                                    <TextBlock FontSize="12" Text="{Binding Path=FullDescription}"></TextBlock>
+                                    <TextBlock FontSize="12" FontWeight="Bold" Text="{Binding Path=Rates}"></TextBlock>
+                                    <TextBlock FontSize="14" FontWeight="Bold" Text="{Binding Path=Price}">rub</TextBlock>
+                                    <TextBlock FontSize="12" FontStyle="Italic" Text="{Binding Path=Category}"></TextBlock>
+                                    
+
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </ScrollViewer>
+            <Grid x:Name="Instruments" DockPanel.Dock="Right" MinWidth="150" MaxWidth="200" Style="{StaticResource dark_maincolor}" HorizontalAlignment="Right">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Button x:Name="AddElementButton" Background="Transparent" Foreground="White" FontSize="25" Grid.Row="0" Margin="20" IsEnabled="True" Command="{Binding AddElementCommand}" CommandParameter="{Binding ElementName=listBox, Path=ItemsSource}" Content="{DynamicResource add_label}"></Button>
+                <Button x:Name="DeleteElementButton" Background="Transparent" Foreground="White" FontSize="25" Grid.Row="1" Margin="20" IsEnabled="False" Command="{Binding DeleteElementCommand}" CommandParameter="{Binding ElementName=listBox, Path=SelectedItem}" Content="{DynamicResource delete_label}"></Button>
+                <Button x:Name="EditElementButton" Background="Transparent" Foreground="White" FontSize="25" Grid.Row="2" Margin="20" IsEnabled="False" Command="{Binding EditElementCommand}" CommandParameter="{Binding ElementName=listBox, Path=SelectedItem}" Content="{DynamicResource edit_label}"></Button>
+            </Grid>
+        </DockPanel>
+    </Grid>
+</Window>

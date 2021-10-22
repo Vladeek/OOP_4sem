@@ -1,0 +1,48 @@
+﻿<Window x:Class="LPLab06_07.AddSubWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LPLab06_07"
+        mc:Ignorable="d"
+        Title="AddSubWindow" Height="450" Width="800" ResizeMode="NoResize" Cursor="Hand">
+    <Grid Background="#517DBF" x:Name="ContentGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Grid.Row="0" FontSize="20" Foreground="White" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0 0 0" Text="{DynamicResource title_label}"></TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="1" FontSize="20" Foreground="White" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0 0 0" Text="{DynamicResource sdesc_label}"></TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="2" FontSize="20" Foreground="White" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0 0 0" Text="{DynamicResource fdesc_label}"></TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="3" FontSize="20" Foreground="White" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0 0 0" Text="{DynamicResource category_label}"></TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="4" FontSize="20" Foreground="White" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0 0 0" Text="{DynamicResource price_label}"></TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="5" FontSize="20" Foreground="White" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0 0 0" Text="{DynamicResource rates_label}"></TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="6" FontSize="20" Foreground="White" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20 0 0 0" Text="{DynamicResource image_label}"></TextBlock>
+
+        <TextBox x:Name="title_field" Grid.Column="1" Grid.Row="0" TextWrapping="Wrap" MaxLength="30" FontSize="16" Margin="7"></TextBox>
+        <TextBox x:Name="sdesc_field" Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" MaxLength="40" FontSize="16" Margin="7"></TextBox>
+        <TextBox x:Name="fdesc_field" Grid.Column="1" Grid.Row="2" TextWrapping="Wrap" MaxLength="120" FontSize="16" Margin="7"></TextBox>
+        <GroupBox x:Name="category_field" Grid.Column="1" Grid.Row="3">
+            <StackPanel Orientation="Horizontal" >
+                <RadioButton x:Name="musinstRB" Foreground="White" VerticalAlignment="Center" FontSize="16" Margin="5" IsChecked="True" Content="{DynamicResource musinst_label}"></RadioButton>
+                <RadioButton x:Name="consumRB" Foreground="White" VerticalAlignment="Center" FontSize="16" Margin="5" Content="{DynamicResource consumables_label}"></RadioButton>
+                <RadioButton x:Name="otherRB" Foreground="White" VerticalAlignment="Center" FontSize="16" Margin="5" Content="{DynamicResource other_label}"></RadioButton>
+            </StackPanel>
+        </GroupBox>
+        <TextBox x:Name="price_field" Grid.Column="1" Grid.Row="4" TextWrapping="Wrap" MaxLength="10" FontSize="16" Margin="7"></TextBox>
+        <TextBox x:Name="rates_field" Grid.Column="1" Grid.Row="5" TextWrapping="Wrap" MaxLength="10" FontSize="16" Margin="7"></TextBox>
+        <Button x:Name="getfile_button" Grid.Column="1" Grid.Row="6" FontSize="16" Margin="10" Width="100" Click="getfile_button_Click" Content="{DynamicResource file_label}"></Button>
+
+        <Button x:Name="submit_button" Grid.Row="7" Grid.ColumnSpan="2" Width="150" FontSize="16"  Margin="3" Click="submit_button_Click" Content="{DynamicResource send_label}"></Button>
+    </Grid>
+</Window>

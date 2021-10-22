@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:LPLab06_07.Resources"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <v:String x:Key="add_label">Add</v:String>
+    <v:String x:Key="favorites_label">Favorites</v:String>
+    <v:String x:Key="search_label">Search</v:String>
+    <v:String x:Key="delete_label">Delete</v:String>
+    <v:String x:Key="edit_label">Edit</v:String>
+
+
+    <v:String x:Key="title_label">Title</v:String>
+    <v:String x:Key="fdesc_label">Full description</v:String>
+    <v:String x:Key="sdesc_label">Short description</v:String>
+    <v:String x:Key="category_label">Category</v:String>
+    <v:String x:Key="price_label">Price</v:String>
+    <v:String x:Key="rates_label">Rates</v:String>
+    <v:String x:Key="image_label">Image</v:String>
+
+    <v:String x:Key="file_label">File</v:String>
+    <v:String x:Key="send_label">Send</v:String>
+
+    <v:String x:Key="musinst_label">Musical Instrument</v:String>
+    <v:String x:Key="consumables_label">Consumables</v:String>
+    <v:String x:Key="other_label">Other</v:String>
+
+
+</ResourceDictionary>

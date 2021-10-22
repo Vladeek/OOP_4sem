@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:LPLab06_07.Resources"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    <v:String x:Key="add_label">Добавить</v:String>
+    <v:String x:Key="favorites_label">Избранное</v:String>
+    <v:String x:Key="search_label">Поиск</v:String>
+    <v:String x:Key="delete_label">Удалить</v:String>
+    <v:String x:Key="edit_label">Редактор</v:String>
+
+    <v:String x:Key="title_label">Заголовок</v:String>
+    <v:String x:Key="fdesc_label">Полное описание</v:String>
+    <v:String x:Key="sdesc_label">Краткое описание</v:String>
+    <v:String x:Key="category_label">Категория</v:String>
+    <v:String x:Key="price_label">Цена</v:String>
+    <v:String x:Key="rates_label">Оценки</v:String>
+    <v:String x:Key="image_label">Картинка</v:String>
+
+    <v:String x:Key="file_label">Файл</v:String>
+    <v:String x:Key="send_label">Отправить</v:String>
+
+    <v:String x:Key="musinst_label">Музыкальный инструмент</v:String>
+    <v:String x:Key="consumables_label">Расходник</v:String>
+    <v:String x:Key="other_label">Другое</v:String>
+</ResourceDictionary>
